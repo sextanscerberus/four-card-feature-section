@@ -16,7 +16,7 @@ body {
 }
 
 main {
-	margin: 4em 2em;
+	margin: 3em;
 }
 
 #description {
@@ -83,4 +83,56 @@ h1 {
 #attribution {
 	text-align: center;
 	font-size: 12px;
+}
+
+@media (min-width: 457px) {
+	main {
+		margin: 3em auto;
+		width: 50%;
+	}
+}
+
+@media (min-width: 800px) {
+	main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 90%;
+	}
+
+	#description {
+		width: 70%;
+		margin-bottom: 1.5em;
+	}
+
+	#cards {
+		display: grid;
+		grid-template-columns: repeat(3, 0.75fr);
+		grid-template-rows: repeat(2, 0.75fr);
+	}
+
+	.card {
+		margin: 0;
+	}
+
+	.orange-card {
+		grid-column-start: 2;
+	}
+
+	.cyan-card, .blue-card {
+		transform: translateY(50%);
+	}
+
+	.blue-card {
+		grid-column-start: 3;
+		grid-row-start: 1;
+	}
+
+	#attribution {
+		font-size: inherit;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
 }
